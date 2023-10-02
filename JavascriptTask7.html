@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        /* Define the initial CSS styles for the image */
+        .animated-image {
+            width: 200px;
+            height: 200px;
+            transition: transform 3s ease;
+        }
+
+        /* Define the animation style */
+        .animate {
+            transform: rotate(360deg);
+        }
+
+        /* Style the button */
+        .animation-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" class="animated-image" src="animation.png" alt="Animated Image">
+    <button id="animateButton" class="animation-button">Start Animation</button>
+
+    <script>
+        const image = document.getElementById("myImage");
+        const button = document.getElementById("animateButton");
+
+        button.addEventListener("click", () => {
+            // Add the 'animate' class to trigger the animation
+            image.classList.add("animate");
+
+            // Remove the 'animate' class after the animation completes
+            setTimeout(() => {
+                image.classList.remove("animate");
+            }, 1000); // Adjust the duration to match your animation duration
+        });
+    </script>
+</body>
+</html>

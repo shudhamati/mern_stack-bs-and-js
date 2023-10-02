@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Write a JavaScript function that returns a passed string with letters in
+            alphabetical order</li>
+    </ul>
+    <p>
+        <ul type="none">
+    <li>Example String: <span id="inputString">webmaster</span></li>
+    <li></li>Expected Output: <span id="output"></span></li>
+</p>
+</ul>
+    <script>
+        var input=document.getElementById('inputString');
+        var ans=document.getElementById('output');
+
+
+         input = input.textContent;
+       
+        
+
+        ReversedAns=Reverse(input);
+        ans.textContent = ReversedAns;
+        function Reverse(input){
+            let reversed='';
+            for(var i=input.length-1;i>=0;i--){
+                reversed+=input[i];
+            }
+            return reversed;
+        }
+    </script>
+</body>
+</html>

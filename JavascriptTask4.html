@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    
+    
+    <button onclick="showDate()">Show Date</button> <br>
+    <p id="output1"></p><br>
+    <button onclick="showTime()">Show Time</button><br>
+
+    <p id="output2"></p>
+
+    <script>
+        function showDate() {
+            const outputElement = document.getElementById('output1');
+            
+            // Get the current date
+            const currentDate = new Date();
+
+            // Format the date as a string
+            const formattedDate = currentDate.toDateString();
+
+            // Display the formatted date
+            outputElement.textContent = formattedDate;
+        }
+
+        function showTime() {
+            const outputElement = document.getElementById('output2');
+            
+            // Get the current time
+            const currentTime = new Date();
+
+            // Format the time as a string
+            const formattedTime = currentTime.toLocaleTimeString();
+
+            // Display the formatted time
+            outputElement.textContent =formattedTime;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        ul,li{
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+   <ul  type="radio">
+    <li>   Write a JavaScript function that reverse a number.</li>
+    <li>   Sample Data and output:</li>
+   </ul>
+<ul type="none">
+    <li>Example x =  <span id="inputString">32243</span></li>
+    <li>Reversed String: <span id="reversedString"></span></li>
+</ul>
+    <script>
+        const inputElement = document.getElementById('inputString');
+        const reversedElement = document.getElementById('reversedString');
+
+        // Get the input string value
+        const inputString = inputElement.textContent;
+
+        // Reverse the string
+        const reversedString = reverse(inputString);
+        reversedElement.textContent = reversedString;
+
+        function reverse(input) {
+            let reversed = '';
+            for (let i = input.length - 1; i >= 0; i--) {
+                reversed += input[i];
+            }
+            return reversed;
+        }
+    </script>
+</body>
+</html>
